@@ -36,8 +36,8 @@ h1 {
 
 .container {
   background: radial-gradient(50% 50% at 50% 50%,
-    rgba(167, 237, 237, 0.3) 0%,
-    rgba(156, 226, 226, 0) 100%);
+      rgba(167, 237, 237, 0.3) 0%,
+      rgba(156, 226, 226, 0) 100%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -109,7 +109,8 @@ input:focus {
 }
 
 .guess,
-.play-again {
+.play-again,
+.reveal-game {
   padding: 1em 3em;
   border-radius: 50px;
   margin-top: 1em;
@@ -124,10 +125,13 @@ input:focus {
 
 .guess:active,
 .play-again:active,
+.reveal-game:active,
 .guess:focus,
 .play-again:focus,
+.reveal-game:focus,
 .guess:hover,
-.play-again:hover {
+.play-again:hover,
+.reveal-game:hover {
   outline: 0;
   transform: scale(0.98);
   filter: brightness(0.9);

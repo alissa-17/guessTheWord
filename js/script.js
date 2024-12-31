@@ -7,9 +7,26 @@ const remainingGuessesSpan = document.querySelector(".remaining span");
 const message = document.querySelector(".message");
 const playAgainButton = document.querySelector(".play-again");
 
+const guessForm = document.querySelector(".guess-form");
+const revealGame = document.querySelector(".reveal-game");
+const game = document.querySelector(".game");
+
 let word = "magnolia";
 let guessedLetters = [];
 let remainingGuesses = 8;
+
+const gameButton = function () {
+    game.classList.add("hide");
+}
+
+gameButton();
+
+revealGame.addEventListener("click", function(){
+    game.classList.remove("hide");
+    revealGame.classList.add("hide");
+})
+
+
 
 const getWord = async function () {
     const response = await fetch("https://gist.githubusercontent.com/skillcrush-curriculum/7061f1d4d3d5bfe47efbfbcfe42bf57e/raw/5ffc447694486e7dea686f34a6c085ae371b43fe/words.txt");
